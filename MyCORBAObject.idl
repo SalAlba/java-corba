@@ -1,0 +1,33 @@
+struct Bank
+{
+  string account;
+  long id;
+  double price;
+};
+
+
+typedef sequence<Bank> MyBankObjects;
+
+interface MyCORBAObject
+{	
+	string getLowerCase(in string s);	
+
+	string getOneList(in long index); 
+
+	void removeFromList(in long index);
+
+	void updateList(in long index,in string msg);
+
+	void addToList(in string msg);
+
+
+	void addBank(in string account, in long id, in double price);
+
+	MyBankObjects getBankList();
+
+	Bank getBank(in long index);
+
+	void removeBank(in long index);
+
+	void updateBank(in long index, in string account, in long id, in double price);
+};
